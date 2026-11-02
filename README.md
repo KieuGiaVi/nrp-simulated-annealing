@@ -15,7 +15,11 @@ nrp_sa_experiment/                kết quả (đúng cấu trúc thư mục OUT
 ├── table_summary.csv             bảng tổng hợp thực nghiệm gốc
 ├── table_instances.csv           đặc trưng 12 tập dữ liệu
 ├── solutions/                    lịch tốt nhất của mỗi (tập, phương pháp), dạng .txt và .json
-├── figures/                      hình vẽ
+├── figures/                      hình vẽ dùng trong bài báo
+│   ├── hinh1_so_do_thuat_toan.png          Hình 1
+│   ├── hinh2_phan_bo_gap.png               Hình 2
+│   ├── hinh3_chi_phi_theo_thoi_gian.png    Hình 3
+│   └── fig_sa_60_vs_600.png                Hình 4
 └── revision/                     thực nghiệm bổ sung theo ý kiến phản biện (R0–R10)
     ├── environment.json          cấu hình máy và phiên bản thư viện của lần chạy
     ├── milp_model_size.csv       số biến, số ràng buộc, số phần tử khác 0 của mô hình MILP
@@ -38,7 +42,7 @@ Nurse Rostering Benchmark Instances (Curtois, T., & Qu, R., 2014), lưu trữ t�
 
 ## Môi trường đã dùng
 
-Google Colab (miễn phí), Intel Xeon CPU @ 2.20 GHz, 2 CPU logic, 13,6 GB RAM; Python 3.13.18, NumPy 2.1.3, SciPy 1.16.3, pandas 2.2.3. HiGHS được gọi qua `scipy.optimize.milp` với thiết lập luồng mặc định. SA và HC viết bằng Python thuần, chạy đơn luồng. Chi tiết trong `nrp_sa_experiment/revision/environment.json`.
+Google Colab (miễn phí), Intel Xeon CPU @ 2.20 GHz, 2 CPU logic, 13,6 GB RAM; Python 3.13.18, NumPy 2.1.3, SciPy 1.16.3, pandas 2.2.3. HiGHS được gọi qua `scipy.optimize.milp` với thiết lập luồng mặc định; đây là HiGHS 1.8.0 đi kèm SciPy 1.16.3. Trường `highs` trong `environment.json` (1.15.1) là phiên bản gói `highspy` cài riêng trên máy, không được dùng trong thực nghiệm. SA và HC viết bằng Python thuần, chạy đơn luồng. Chi tiết trong `nrp_sa_experiment/revision/environment.json`.
 
 ## Chạy lại
 
@@ -48,7 +52,7 @@ Google Colab (miễn phí), Intel Xeon CPU @ 2.20 GHz, 2 CPU logic, 13,6 GB RAM;
 
 **Lưu ý về tái lập:** SA làm nguội theo thời gian thực, nên cùng seed trên máy nhanh hơn hoặc chậm hơn sẽ thực hiện số bước lặp khác nhau và cho kết quả hơi khác. Không chạy song song nhiều thực nghiệm trên cùng máy. Mọi lịch trả về đều được kiểm tra lại bằng hàm `evaluate()` viết độc lập với hàm đánh giá dùng trong tìm kiếm.
 
-`traces.json` (đường hội tụ) của thực nghiệm gốc không được lưu giữ; đường hội tụ và tỷ lệ lần chạy khả thi theo thời gian được vẽ từ dữ liệu R3–R4 (`traces_sa_budget.json`, hình `figures/fig_sa_60_vs_600.png`).
+`traces.json` (đường hội tụ) của thực nghiệm gốc không được lưu giữ, nên Hình 3 chỉ có ở dạng ảnh; đường hội tụ và tỷ lệ lần chạy khả thi theo thời gian được vẽ từ dữ liệu R3–R4 (`traces_sa_budget.json`, hình `figures/fig_sa_60_vs_600.png`).
 
 ## Giấy phép
 
