@@ -1,6 +1,6 @@
 # Simulated Annealing cho bài toán xếp lịch trực điều dưỡng trên bộ dữ liệu chuẩn
 
-Mã nguồn, kết quả thực nghiệm và lời giải kèm bài báo của **Kiều Gia Vĩ** và **Trần Bá Minh Sơn** (Viện Công nghệ Số, Trường Đại học Thủ Dầu Một), gửi Tạp chí Khoa học Trường Đại học Thủ Dầu Một.
+Mã nguồn, kết quả thực nghiệm và lời giải kèm bài báo gửi Tạp chí Khoa học Trường Đại học Thủ Dầu Một.
 
 *English summary: code, raw results and rosters for a study of a simple Simulated Annealing (SA) for the Nurse Rostering Problem on Instances 1–12 of the Curtois & Qu (2014) benchmark, compared with Hill Climbing (HC), random-restart HC and the HiGHS MILP solver under 60 s and 600 s budgets. Everything runs from one Jupyter/Colab notebook on a CPU.*
 
